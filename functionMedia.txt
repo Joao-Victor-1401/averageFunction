@@ -1,0 +1,31 @@
+//Calculating student average in roles
+
+function average(array){
+    add = 0;
+    for (value of array){
+        add += value;
+    }
+    return add/(array.length);
+}
+
+function studentGrade(note){
+    testMedia = average(note);
+
+    if (testMedia < 59) return "F";
+    if (testMedia < 69) return "D"
+    if (testMedia < 79) return "C"
+    if (testMedia < 89) return "B"
+    return "A";
+}
+
+let student1 = [40,50,60];
+let student2 = [50,60,70];
+let student3 = [60,70,80];
+let student4 = [70,80,90];
+let student5 = [80,90,100];
+
+console.log(studentGrade(student1));
+console.log(studentGrade(student2));
+console.log(studentGrade(student3));
+console.log(studentGrade(student4));
+console.log(studentGrade(student5));
